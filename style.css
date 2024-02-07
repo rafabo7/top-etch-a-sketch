@@ -11,14 +11,23 @@ body{
 header {
     box-sizing: border-box;
     font-size: 1.2em;
-    margin-top: 24px;
 }
 main {
-    margin-top: 24px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 22px;
 }
-
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+}
 #container{
-    box-sizing: border-box;
     border: 25px solid rgb(173, 14, 14);
     width: 600px;
     height: 600px;
@@ -28,7 +37,4 @@ main {
 
 .cell{
     box-sizing: border-box;
-    width: calc(100% / 16);
-    height: calc(100% / 16);
-    border: 0.6px solid grey;
 }
