@@ -2,7 +2,7 @@ const container = document.querySelector('#container')
 
 createGrid()
 
-function createGrid(grid=16){
+function createGrid(grid=64, color='#000000'){
     while (container.firstChild) {
         container.removeChild(container.firstChild)
     }
@@ -16,7 +16,7 @@ function createGrid(grid=16){
         cell.style.height = `${cellSide}px`
 
         cell.addEventListener('mouseover', (e) => {
-            cell.style.backgroundColor = 'black'
+            cell.style.backgroundColor = color
         })
         cell.addEventListener('mouseout', (e) => {
             cell.style.backgroundColor = 'transparent'
@@ -29,6 +29,12 @@ function createGrid(grid=16){
 const area = document.querySelector('#grid-area')
 
 area.addEventListener('change', () => {createGrid(area.value)})
+
+const color = document.querySelector('#color')
+
+color.addEventListener('change', () => {createGrid(area.value, color.value)})
+
+
 
 
 
