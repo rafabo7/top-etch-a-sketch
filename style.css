@@ -1,6 +1,9 @@
-/* :root{
-
-} */
+:root{
+    --black: #000000;
+    --dark-grey: #393E46;
+    --aqua: #00ADB5;
+    --white: #EEEEEE;
+}
 
 body{
     text-align: center;
@@ -8,32 +11,55 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
     font-size: 16px;
+    height: 100vh;
+    background-image: linear-gradient(
+        var(--black) 0%,
+        var(--dark-grey) 30%,
+        var(--dark-grey) 90%,
+        var(--black) 100%
+    );
 }
 
 header {
     box-sizing: border-box;
     font-size: 1.2em;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    color: var(--white);
 }
+
+header h1 {
+    border: 2px solid var(--white);
+    border-radius: 15px;
+    padding: 12px 0 12px 0;
+    width: calc(100% - 24px);
+    margin: 12px 12px 0 12px
+}
+
 main {
-    margin-top: 18px;
+    padding-top: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     justify-content: space-evenly;
     gap: 22px;
+    color: var(--aqua);
 }
 aside {
     display: flex;
-    flex-direction: column;
+    width: 900px;
     gap: 18px;
-    align-items: flex-start;
+    align-items:center;
+    justify-content: space-evenly;
 }
 #container{
-    border: 25px solid rgb(173, 14, 14);
-    width: 600px;
+    border: 25px solid var(--aqua);
+    border-radius: 25px;
+    width: 1200px;
     height: 600px;
     display: flex;
     flex-wrap: wrap;
@@ -41,4 +67,11 @@ aside {
 
 .cell{
     box-sizing: border-box;
+}
+
+footer {
+    color: var(--white);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
